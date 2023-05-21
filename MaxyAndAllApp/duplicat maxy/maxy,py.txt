@@ -1,0 +1,68 @@
+if __name__ == '__main__':
+    def karo():
+            
+            
+            speak("Listening start")
+        # while(True):
+            text = command()
+            if text in ["exit", "quit", "stop"]:
+                exit()
+            else:
+                
+                doooo(text)
+
+    def func():
+        x = var.get().lower()
+        doooo(x)
+
+    # for title
+    wind.title("Maxy")
+
+#  for icon
+    imj = PhotoImage(file='mic.png')
+    wind.iconphoto(False, imj)
+
+    # // window size
+
+    wind.maxsize(width=1280, height=890)
+    wind.minsize(width=1280, height=890)
+    wind.colormapwindows()
+    wind.geometry('400x350')
+    wind.config(background='#108cff')
+    # label 1
+    mylabel = Label(wind,font=("arial",20),bg='#108cff',fg='white',justify="left" ,border=1)
+    mylabel.place(x=30,y=120)
+    # show image
+    my_pic5 = Image.open("mic.png")
+
+    resize_pic5 = my_pic5.resize((100,102
+                                  ), Image.ANTIALIAS)
+    new_pic5 = ImageTk.PhotoImage(resize_pic5)
+    
+    lbl=Label(wind,bg="#108cff").place(x=290,y=60)
+    
+    # label 2
+    mylabel2 = Label(wind,font=("arial",16 ),bg="#108cff",justify="right"   )
+    mylabel2.place(x=1000,y=90)
+
+
+
+    my_pic = Image.open("search3.png")
+
+    resize_pic = my_pic.resize((53, 54), Image.ANTIALIAS)
+    new_pic = ImageTk.PhotoImage(resize_pic)
+
+    
+    
+
+
+    var = StringVar()
+    ent = Entry(wind, width=25, font=("Arial", 23), textvariable=var)
+    ent.place(x=283, y=710)
+
+    btn = Button(wind, image=new_pic, command=func,activebackground="#108cff",border=2,bg="white")
+    btn.place(x=937 ,y=710)
+
+    btn2 = Button(wind, image=new_pic5, command=karo,activebackground="#108cff",bg="#108cff",border=2).place(x=590,y=550)
+
+    wind.mainloop()
